@@ -1,9 +1,0 @@
-/**
- * 
- */
-/**
- * @author PEDROENGEL
- *
- */
-module Trabalho {
-}
