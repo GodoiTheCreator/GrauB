@@ -1,6 +1,40 @@
 package graub;
 
 public class Produto {
-//LJKADFBGKAJD
-//
+	private String nome;
+	private float preco;
+	private int id;
+	
+	// Constructors
+	public Produto(String nome, float preco, int id) {
+		super();
+		this.nome = nome;
+		this.preco = preco;
+		this.id = id;
+	}
+
+	// Getters and Setters
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public float getPreco() {
+		return preco;
+	}
+
+	public void setPreco(float preco) {
+		this.preco = preco;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
 }
