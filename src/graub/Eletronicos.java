@@ -27,4 +27,12 @@ public class Eletronicos extends Produto{
 	public void setTipo(String tipo) {
 		this.tipo = tipo;
 	}
+
+	@Override
+	public String toString() {
+		return "Eletronicos [marca=" + marca + ", tipo=" + tipo + ", nome=" + getNome() + ", Preco="
+				+ getPreco() + ", Id=" + getId() +  ", quantidade=" + getQuantidade() + "]";
+	}
+	
+	
 }

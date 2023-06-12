@@ -1,6 +1,7 @@
 package graub;
 
 public class Livro extends Produto {
+
 	private String autor;
 	private String editora;
 	
@@ -27,4 +28,12 @@ public class Livro extends Produto {
 	public void setEditora(String editora) {
 		this.editora = editora;
 	}
+
+	@Override
+	public String toString() {
+		return "Livro [autor=" + autor + ", editora=" + editora + ", Título=" + getNome() +  ", quantidade=" + getQuantidade() +
+				", Preco=" + getPreco() + ", Id=" + getId() + "]";
+	}
+	
+	
 }

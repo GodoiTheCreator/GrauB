@@ -37,4 +37,12 @@ public class Eletrodomesticos extends Produto{
 	public void setTensao(String tensao) {
 		this.tensao = tensao;
 	}
+
+	@Override
+	public String toString() {
+		return "Eletrodomesticos [marca=" + marca + ", cor=" + cor + ", tensao=" + tensao + ", Nome=" + getNome()
+				+ ", Preco=" + getPreco() + ", Id=" + getId() +  ", quantidade=" + getQuantidade() + "]";
+	}
+	
+	
 }

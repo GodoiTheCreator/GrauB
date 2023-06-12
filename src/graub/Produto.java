@@ -4,6 +4,7 @@ public class Produto {
 	private String nome;
 	private float preco;
 	private int id;
+	private int quantidade;
 	
 	// Constructors
 	public Produto(String nome, float preco, int id) {
@@ -37,4 +38,13 @@ public class Produto {
 	public void setId(int id) {
 		this.id = id;
 	}
+
+	public int getQuantidade() {
+		return quantidade;
+	}
+
+	public void setQuantidade(int quantidade) {
+		this.quantidade = quantidade;
+	}
+	
 }

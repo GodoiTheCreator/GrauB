@@ -38,4 +38,11 @@ public class Roupas extends Produto{
 		this.tamanho = tamanho;
 	}
 
+	@Override
+	public String toString() {
+		return "Roupas [marca=" + marca + ", cor=" + cor + ", tamanho=" + tamanho + ", Nome=" + getNome()
+				+ ", Preco=" + getPreco() + ", Id()=" + getId() +  ", quantidade=" + getQuantidade() + "]";
+	}
+	
+
 }
