@@ -31,8 +31,8 @@ public class App {
 		// teste
 		Scanner scanner = new Scanner(System.in);
 		Carrinho c1 = new Carrinho();
-		Livro l1 = new Livro("Harry Potter", 15.2f, 1221212, "RJ Holland", "Editora");
-		Eletrodomesticos em1 = new Eletrodomesticos("Geladeira 2 portas", 1500.25f, 12312313, "Samsung", "Cinza", "220V");
+		Livro l1 = new Livro("Harry Potter", 15.2f, 1221212, 10, "RJ Holland", "Editora");
+		Eletrodomesticos em1 = new Eletrodomesticos("Geladeira 2 portas", 1500.25f, 12312313, 10, "Samsung", "Cinza", "220V");
 		c1.addCarrinho(l1);
 		c1.addCarrinho(em1);
 		
@@ -48,6 +48,7 @@ public class App {
 			case 1:
 				System.out.println("");
 			}
+		
 		}
 	}
 

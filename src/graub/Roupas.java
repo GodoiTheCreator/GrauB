@@ -6,8 +6,8 @@ public class Roupas extends Produto{
 	private String tamanho;
 	
 	// Constructors
-	public Roupas(String nome, float preco, int id, String marca, String cor, String tamanho) {
-		super(nome, preco, id);
+	public Roupas(String nome, float preco, int id, int quantidade, String marca, String cor, String tamanho) {
+		super(nome, preco, id, quantidade);
 		this.marca = marca;
 		this.cor = cor;
 		this.tamanho = tamanho;

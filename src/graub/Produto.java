@@ -7,11 +7,12 @@ public class Produto {
 	private int quantidade;
 	
 	// Constructors
-	public Produto(String nome, float preco, int id) {
+	public Produto(String nome, float preco, int id, int quantidade) {
 		super();
 		this.nome = nome;
 		this.preco = preco;
 		this.id = id;
+		this.quantidade = quantidade;
 	}
 
 	// Getters and Setters

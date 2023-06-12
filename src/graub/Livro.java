@@ -6,8 +6,8 @@ public class Livro extends Produto {
 	private String editora;
 	
 	// Constructor
-	public Livro(String nome, float preco, int id, String autor, String editora) {
-		super(nome, preco, id);
+	public Livro(String nome, float preco, int id, int quantidade, String autor, String editora) {
+		super(nome, preco, id, quantidade);
 		this.autor = autor;
 		this.editora = editora;
 	}

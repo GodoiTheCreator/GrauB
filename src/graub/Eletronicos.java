@@ -5,8 +5,8 @@ public class Eletronicos extends Produto{
 	private String tipo;
 	
 	// Constructors
-	public Eletronicos(String nome, float preco, int id, String marca, String tipo) {
-		super(nome, preco, id);
+	public Eletronicos(String nome, float preco, int quantidade, int id, String marca, String tipo) {
+		super(nome, preco, id, quantidade);
 		this.marca = marca;
 		this.tipo = tipo;
 	}
