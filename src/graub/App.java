@@ -27,8 +27,9 @@ public class App {
 		int opcao = menu2.nextInt();
 		return opcao;
 	}
+	
 	public static void main(String[] args) {
-		// teste
+		/* teste
 		Scanner scanner = new Scanner(System.in);
 		Carrinho c1 = new Carrinho();
 		Livro l1 = new Livro("Harry Potter", 15.2f, 1221212, 10, "RJ Holland", "Editora");
@@ -50,6 +51,7 @@ public class App {
 			}
 		
 		}
+		*/		
 	}
 
 }
