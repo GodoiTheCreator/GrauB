@@ -30,8 +30,8 @@ public class Eletronicos extends Produto{
 
 	@Override
 	public String toString() {
-		return "Eletronicos [marca=" + marca + ", tipo=" + tipo + ", nome=" + getNome() + ", Preco="
-				+ getPreco() + ", Id=" + getId() +  ", quantidade=" + getQuantidade() + "]";
+		return "Eletronicos [Id=" + getId() +"marca=" + marca + ", tipo=" + tipo + ", nome=" + getNome() + ", Preco="
+				+ getPreco() +  ", quantidade=" + getQuantidade() + "]";
 	}
 	
 	

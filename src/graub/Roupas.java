@@ -40,8 +40,8 @@ public class Roupas extends Produto{
 
 	@Override
 	public String toString() {
-		return "Roupas [marca=" + marca + ", cor=" + cor + ", tamanho=" + tamanho + ", Nome=" + getNome()
-				+ ", Preco=" + getPreco() + ", Id()=" + getId() +  ", quantidade=" + getQuantidade() + "]";
+		return "Roupas [Id()=" + getId() + ", marca=" + marca + ", cor=" + cor + ", tamanho=" + tamanho + ", Nome=" + getNome()
+				+ ", Preco=" + getPreco() + ", quantidade=" + getQuantidade() + "]";
 	}
 	
 

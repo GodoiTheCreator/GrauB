@@ -29,7 +29,7 @@ public class App {
 	}
 	
 	public static void main(String[] args) {
-		/* teste
+		/* teste*/
 		Scanner scanner = new Scanner(System.in);
 		Carrinho c1 = new Carrinho();
 		Livro l1 = new Livro("Harry Potter", 15.2f, 1221212, 10, "RJ Holland", "Editora");
@@ -38,9 +38,11 @@ public class App {
 		c1.addCarrinho(em1);
 		
 		for (Produto item : c1.carrinho) {
-			System.out.println(item.toString());
+			if (item instanceof livro){
+				System.out.println(item.toString());
+			}
 		}
-		
+		/*
 		int x = mostrarMenu();
 		switch(x) {
 		case 1:
