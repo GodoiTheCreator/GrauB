@@ -44,5 +44,5 @@ public class Eletrodomesticos extends Produto{
 				+ ", Preco=" + getPreco()+  ", quantidade=" + getQuantidade() + "]";
 
 	}
-
 }
+

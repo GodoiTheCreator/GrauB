@@ -6,11 +6,12 @@ public class Carrinho {
 	ArrayList<Produto> carrinho = new ArrayList<>();
 	public Carrinho() {}
 	
-	public void addCarrinho(Produto produto) {
+	public void addCarrinho(Produto produto, int quantidade) {
 		carrinho.add(produto);
+		produto.setQuantidade(produto.getQuantidade() - quantidade);
 	}
 	
-	public void limpaCarrinho(Produto produto) {
+	public void limpaCarrinho() {
 		carrinho.clear();
 	}
 	
