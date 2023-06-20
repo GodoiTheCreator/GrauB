@@ -40,9 +40,9 @@ public class Eletrodomesticos extends Produto{
 
 	@Override
 	public String toString() {
-		return "Eletrodomesticos [Id=" + getId() + ", marca=" + marca + ", cor=" + cor + ", tensao=" + tensao + ", Nome=" + getNome()
+		return "Eletrodomesticos Id=" + getId() + ", marca=" + marca + ", cor=" + cor + ", tensao=" + tensao + ", Nome=" + getNome()
 				+ ", Preco=" + getPreco()+  ", quantidade=" + getQuantidade() + "]";
+
 	}
-	
-	
+
 }
