@@ -4,43 +4,58 @@ import java.util.ArrayList;
 
 public class Estoque {
 
-	public ArrayList<Produto> produtos = new ArrayList();
+	public ArrayList<Produto> estoque = new ArrayList();
 
-	public Estoque() {
+	// Construtores
+	public Estoque() {}
 
-	}
-
-	public boolean adicionarEstoque(Produto produto) {
-		for (Produto item : produtos) {
-			if (produto.getId() == item.getId()) {
+	// Adicionar
+	public boolean adicionarProduto(Produto produto) {
+		for (Produto p : estoque) {
+			if (produto.getId() == p.getId()) {
 				return false;
 			}
 		}
-		produtos.add(produto);
+		estoque.add(produto);
 		return true;
 	}
 
-	public void adicionarEstoque(ArrayList<Produto> produtos) {
-		for (Produto p : produtos) {
-			this.adicionarEstoque(p);
+	public void alimetarEstoque(Produto produto){
+		if (adicionarProduto(produto)){
+			System.out.println("Produto adicionado.");
+		} else {
+			for(Produto p : estoque){
+				if (p.getId() == produto.getId()){
+					retornaProduto(p.getId(), produto.getQuantidade());
+					System.out.println("Produto adicionado.");
+				}
+			}
 		}
 	}
 
-	public void removerEstoque(Produto produto) {
-		produtos.remove(produto);
-	}
-
-	public void removerEstoque(ArrayList<Produto> produtos) {
-		for (Produto p : produtos) {
-			this.produtos.remove(p);
+	public void retornaProduto(int id, int quantidade){
+		for (Produto p : estoque) {
+			if(p.getId() == id){
+				p.setQuantidade(p.getQuantidade() + quantidade);
+			}
 		}
 	}
 
+	public void removerProduto(int id) {
+		for (Produto p : estoque) {
+			if (p.getId() == id){
+				estoque.remove(p);
+			}
+		}
+		
+	}
+
+	// toString com filtro
 	public String toStringEletrodomesticos() {
 		String lista = "";
-		for (Produto prod : produtos) {
-			if (prod instanceof Eletrodomesticos) {
-				lista += prod.toString() + " ";
+		for (Produto p : estoque) {
+			if (p instanceof Eletrodomesticos) {
+				lista += p.toString();
 			}
 		}
 		return lista;
@@ -48,9 +63,9 @@ public class Estoque {
 
 	public String toStringEletronicos() {
 		String lista = "";
-		for (Produto prod : produtos) {
-			if (prod instanceof Eletronicos) {
-				lista += prod.toString() + " ";
+		for (Produto p : estoque) {
+			if (p instanceof Eletronicos) {
+				lista += p.toString();
 			}
 		}
 		return lista;
@@ -58,9 +73,9 @@ public class Estoque {
 
 	public String toStringLivros() {
 		String lista = "";
-		for (Produto prod : produtos) {
-			if (prod instanceof Livro) {
-				lista += prod.toString() + " ";
+		for (Produto p : estoque) {
+			if (p instanceof Livro) {
+				lista += p.toString();
 			}
 		}
 		return lista;
@@ -68,9 +83,9 @@ public class Estoque {
 
 	public String toStringRoupas() {
 		String lista = "";
-		for (Produto prod : produtos) {
-			if (prod instanceof Roupas) {
-				lista += prod.toString() + " ";
+		for (Produto p : estoque) {
+			if (p instanceof Roupas) {
+				lista += p.toString();
 			}
 		}
 		return lista;
@@ -78,15 +93,30 @@ public class Estoque {
 
 	public String toStringGeral() {
 		String lista = "";
-		for (Produto prod : produtos) {
-			lista += prod.toString() + " ";
+		for (Produto p : estoque) {
+			lista += p.toString();
 		}
 		return lista;
 	}
 
-	public void cancelarCompra(ArrayList<Produto> produtosCarrinho) {
-		for (Produto item : produtosCarrinho) {
-			produtos.add(item);
+	// Métodos de compra
+	public boolean efetuarCompra(Carrinho carrinho, int id, int quantidade) {
+		for(Produto p : estoque){
+			if (p.getId() == id){
+				if (p.getQuantidade() == 0){
+					System.out.println("Infelizmente não temos este produto disponivel no momento, EM BREVE TEREMOS");
+				} else {
+					if (p.getQuantidade() >= quantidade && quantidade > 0){
+						carrinho.adicionarCarrinho(p, quantidade);
+						p.setQuantidade(p.getQuantidade() - quantidade);
+						return true;
+					} else {
+					System.out.println("Quantidade invalida");
+					return false;
+					}
+				}
+			}
 		}
+		return false;
 	}
 }
